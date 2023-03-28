@@ -29,8 +29,6 @@ if len(sys.argv) == 1:
 else:
     num=int(sys.argv[1])
 
-print("D1",len(sys.argv))
 #num=int(sys.argv[1])
-print("D2")
 
 print("Factorial ",num,"! es ", factorial(num))
