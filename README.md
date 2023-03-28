@@ -30,7 +30,7 @@ _Texto_
 _Mencion a todos aquellos que ayudaron a levantar el proyecto desde sus inicios_
 
 * **Angel Palacios** - *Trabajo Inicial* - [Su Git Hub](https://github.com/angelp00)
-* **Alguien** - *Qué hizo* - [Su Git Hub](#link)
+* **Alguien** - *Qué hizo* - [Su Git Hub](#https://link.com/a)
 
 <!-- 
 ![alt text](https://imgs.search.brave.com/Sflv8Y0SFlN-bDx3JvqFGUwdHBd3juZgC48k5U1dbRE/rs:fit:1200:720:1/g:ce/aHR0cHM6Ly9pLnl0/aW1nLmNvbS92aS9k/SlRBM29tT1Zwby9t/YXhyZXNkZWZhdWx0/LmpwZw)
