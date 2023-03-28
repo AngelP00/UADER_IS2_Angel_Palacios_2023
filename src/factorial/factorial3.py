@@ -26,17 +26,13 @@ if len(sys.argv) == 0:
 '''
 print(sys.argv)
 lim_inf = 1
-lim_sup = 60
 
 a= lim_inf
-b= lim_sup
 if len(sys.argv) == 1:
-   b= int(input("Ingrese el limite superior(menor a 60): "))
+   b= int(input("Ingrese el limite superior: "))
 else:
     b=int(sys.argv[1])
 
-if(b>lim_sup):
-       b= lim_sup
 
 print(sys.argv)
 #num=int(sys.argv[1])
