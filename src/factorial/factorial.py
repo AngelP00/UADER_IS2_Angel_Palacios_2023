@@ -4,7 +4,7 @@
 #* Creative commons                                                        *
 #*-------------------------------------------------------------------------*
 import sys
-#nombre del programa: factorial de un numero
+#nombre del programa: factorial de los numeros entre dos extremos [a, b]
 def factorial(num): 
     if num < 0: 
         print("Factorial de un nÃºmero negativo no existe")
@@ -24,11 +24,19 @@ if len(sys.argv) == 0:
    print("Debe informar un nÃºmero!")
    sys.exit()
 '''
-if len(sys.argv) == 1:
-   num=int(input("Ingrese un numero: "))
+if len(sys.argv) < 3:
+   nums= input("Ingrese dos numeros(separados por un espacio): ")
+   nums = nums.split(" ")
+   a=int(nums[0])
+   b=int(nums[1])
 else:
-    num=int(sys.argv[1])
+    #num=int(sys.argv[1])
+    a=int(sys.argv[1])
+    b=int(sys.argv[2])
 
+#print(sys.argv)
 #num=int(sys.argv[1])
+print('a=',a,", b=",b)
 
-print("Factorial ",num,"! es ", factorial(num))
+for num in range(a, b+1):
+    print("Factorial ",num,"! es ", factorial(num))
