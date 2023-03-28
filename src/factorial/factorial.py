@@ -18,8 +18,18 @@ def factorial(num):
             num -= 1
         return fact 
 
+'''
 if len(sys.argv) == 0:
    print("Debe informar un nÃºmero!")
    sys.exit()
-num=int(sys.argv[1])
+'''
+if len(sys.argv) == 1:
+   num=int(input("Ingrese un numero: "))
+else:
+    num=int(sys.argv[1])
+
+print("D1",len(sys.argv))
+#num=int(sys.argv[1])
+print("D2")
+
 print("Factorial ",num,"! es ", factorial(num))
