@@ -1,7 +1,6 @@
 class Factorial:
     def __init__(self):
-        if __name__ == '__main__':
-            print('_Factorial creado_')
+        print('_Factorial creado_')
   
     def run(self, min, max):
         print('print min =',min,', max =',max)
