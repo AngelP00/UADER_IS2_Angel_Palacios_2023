@@ -24,12 +24,12 @@ if len(sys.argv) == 0:
    print("Debe informar un nÃºmero!")
    sys.exit()
 '''
-if len(sys.argv) < 3:
+if len(sys.argv) < 3:# si los limites no fue ingresados se los pide
    nums= input("Ingrese dos numeros(separados por un espacio): ")
-   nums = nums.split(" ")
-   a=int(nums[0])
-   b=int(nums[1])
-else:
+   nums = nums.split(" ")#separa el texto en dos numeros
+   a=int(nums[0])#limite inferior
+   b=int(nums[1])#limite superior
+else:# si los limites superiores fue ingresados utiliza esos limite
     #num=int(sys.argv[1])
     a=int(sys.argv[1])
     b=int(sys.argv[2])
@@ -38,5 +38,6 @@ else:
 #num=int(sys.argv[1])
 print('a=',a,", b=",b)
 
+#for para calcular y mostrar el factorial de cada numero
 for num in range(a, b+1):
     print("Factorial ",num,"! es ", factorial(num))

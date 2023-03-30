@@ -2,7 +2,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 
-
+#funcion para calcular el numero total de iteraciones que fueron necesarias para entrar al bucle 4 2 1
 def iteraciones(num): 
     i=0
     while(num!=1):
@@ -13,42 +13,30 @@ def iteraciones(num):
         else:#impar (n*3)+1
             num = (num*3)+1
     i+=1
-    #print('i',i)
-    return i
+    return i #retorna el numero total de iteraciones
 
 lista = []
 
 a=int(input("Ingrese un numero >= 1: "))
 b=int(input("Ingrese un numero <= 10000: "))
 
-#a=1
-#b=25
+#for para mostrar los elementos del array
 for num in range(a, b+1):
     lista.append([num,iteraciones(num)])
     print('num:',num,',i:',lista[-1])
 
 
-# X axis parameter:
-#xaxis = np.array([2, 10])
-#xaxis = np.array([15, 30])
-
-# Y axis parameter:
-#yaxis = np.array([20, 100])
-
-#print(np.array)
-
+#for para crear la grafica
 for i in range(0,len(lista)-1):
+    xaxis=[lista[i][0],lista[i+1][0]]
+    yaxis=[lista[i][1],lista[i+1][1]]
     
-    x=[lista[i][0],lista[i+1][0]]
-    y=[lista[i][1],lista[i+1][1]]
-    
-    #x=[lista[i][1],lista[i+1][1]]   # 3, 
-    #y=[lista[i][0],lista[i+1][0]]   # 8,
-
-    plt.plot(x, y,color = 'm')
+    plt.plot(xaxis, yaxis,color = 'm')#creacion de una recta
     #plt.legend(loc=1)
     
-    plt.scatter(lista[i][0],lista[i][1])
+    plt.scatter(lista[i][0],lista[i][1])#creacion de un punto
+
+    #creacion del texto(x,y)
     plt.annotate((lista[i][0],lista[i][1]),             # The label for this point
                 xy=(lista[i][0], lista[i][1]), # Position of the corresponding point
                 xytext=(-18, 7),     # Offset text by 7 points to the right
@@ -56,11 +44,6 @@ for i in range(0,len(lista)-1):
                 ha='left',         # Horizontally aligned to the left
                 va='center')       # Vertical alignment is centered
 
-
-#plt.plot([20, 30], [40, 50])
-#plt.plot([30, 60], [50, 70])
-
-#plt.plot(3, 4)
 
 plt.show()
 

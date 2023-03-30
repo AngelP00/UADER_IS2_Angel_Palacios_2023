@@ -42,5 +42,6 @@ print(sys.argv)
 #num=int(sys.argv[1])
 print('a=',a,", b=",b)
 
+#for para calcular y mostrar el factorial de cada numero
 for num in range(a, b+1):
     print("Factorial ",num,"! es ", factorial(num))

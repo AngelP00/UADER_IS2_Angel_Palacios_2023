@@ -28,9 +28,9 @@ print(sys.argv)
 lim_inf = 1
 
 a= lim_inf
-if len(sys.argv) == 1:
+if len(sys.argv) == 1:# si el limite superior no fue ingresado se lo pide
    b= int(input("Ingrese el limite superior: "))
-else:
+else:# si el limite superior fue ingresado utiliza ese limite
     b=int(sys.argv[1])
 
 
@@ -38,5 +38,6 @@ print(sys.argv)
 #num=int(sys.argv[1])
 print('a=',a,", b=",b)
 
+#for para calcular y mostrar el factorial de cada numero
 for num in range(a, b+1):
     print("Factorial ",num,"! es ", factorial(num))
