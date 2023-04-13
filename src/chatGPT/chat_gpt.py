@@ -1,5 +1,5 @@
 """
-Este es un ejemplo de docstring para un módulo en Python.
+Este es un programa para realizar consultas o tener una conversacion con Chat GPt
 
 Autor: Angel Palacios
 Fecha de creación: jue. 13/4(abr.)/2023
