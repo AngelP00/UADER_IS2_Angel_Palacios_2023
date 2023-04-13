@@ -2,7 +2,7 @@
 Este es un ejemplo de docstring para un módulo en Python.
 
 Autor: Angel Palacios
-Fecha de creación: Fecha de creación del módulo
+Fecha de creación: jue. 13/4(abr.)/2023
 """
 
 import sys
@@ -12,7 +12,7 @@ import openai
 #from ExceptionsDeveloper import *
 from ExceptionsDeveloper import ExcepcionUserText
 # ……. [ mas Código de inicialización aqui ] …………
-openai.api_key = "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"
+openai.api_key = "-------api_key-------"
 TOP_P = 1
 FREQ_PENALTY = 0
 PRES_PENALTY = 0
