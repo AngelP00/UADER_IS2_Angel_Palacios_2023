@@ -12,7 +12,7 @@ import openai
 #from ExceptionsDeveloper import *
 from ExceptionsDeveloper import ExcepcionUserText
 # ……. [ mas Código de inicialización aqui ] …………
-openai.api_key = "-------api_key-------"
+openai.api_key = "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"#-------api_key-------
 TOP_P = 1
 FREQ_PENALTY = 0
 PRES_PENALTY = 0
