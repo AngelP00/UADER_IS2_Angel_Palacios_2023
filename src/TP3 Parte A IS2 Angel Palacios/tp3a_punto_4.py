@@ -12,23 +12,24 @@ class CreatorFactura(ABC):
     @abstractmethod
     def crearFactura(self,monto):
         pass
-
-    def crearFactura(self, monto) -> Factura:
-
+    
+    
+    def some_operation(self, monto) -> Factura:
         result = self.crearFactura(monto)
         return result
+    
 
 
 class FacturaIVAResponsable(CreatorFactura):
 
     def crearFactura(self,monto) -> Factura:
-        factura = Factura(monto, "IVA Responsable")
+        factura = Factura(monto*1.4, "IVA Responsable")
         return factura
 
 class FacturaIVANoInscripto(CreatorFactura):
 
     def crearFactura(self,monto) -> Factura:
-        factura = Factura(monto, "IVA No Inscripto")
+        factura = Factura(monto*1.3, "IVA No Inscripto")
         return factura
 
 class FacturaIVAExento(CreatorFactura):
@@ -53,7 +54,7 @@ def client_code(creator: CreatorFactura) -> None:
     #print(f"Yo soy un mero intermediario tipo FACTORY que no se que es lo que estoy creando, pero lo creo.\n"
           #f"{creator.CalcularImpuestos(345)}", end="")
     #print(f"La factura:")
-    factura = creator.crearFactura(345)
+    factura = creator.some_operation(345)
     factura.imprimir_factura()
 
 
@@ -66,4 +67,5 @@ if __name__ == "__main__":
     client_code(FacturaIVANoInscripto())
     print()
     client_code(FacturaIVAExento())
+    print()
     print("\n")

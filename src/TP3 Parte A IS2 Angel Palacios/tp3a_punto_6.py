@@ -94,18 +94,18 @@ print('Finaliza la creación del objeto Shopkeeper NPC: ', dt)
 print('Atributos: ' + ', '.join("%s: %s" % item for item in vars(shopkeeper).items()))
 
 dt = datetime.now()
-tiempo = dt
+datetime_inicial = dt
 print('Instanciando ahora trader: ', dt)
 for i in range(20):
     shopkeeper = Shopkeeper(180, 22, 5, 8)
     dt = datetime.now()
     print(f'Creo Shopkeeper NPC {i} at: ', dt)
-tiempo = datetime.now() - tiempo
-print("time:",tiempo)
 dt = datetime.now()
 print('Finalizó de crear el grupo trader: ', dt)
+print("tiempo que tardo en crear 20 personajes:",dt-datetime_inicial)
 
 dt = datetime.now()
+datetime_inicial = dt
 print('Puedo hacerlo masivamente con 20 NPCs: ', dt)
 shopkeeper_template = Shopkeeper(180, 22, 5, 8)
 warrior_template = Warrior(185, 22, 4, 21)
@@ -119,3 +119,4 @@ for i in range(20):
 
 dt = datetime.now()
 print('Finalizó la creación de la población NPC: ', dt)
+print("tiempo que tardo en clonar 20 personajes:",dt-datetime_inicial)
