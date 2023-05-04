@@ -20,18 +20,19 @@ class Ping(Subject):
                 print(i)
                 print('intentando conectarse a:', string)
         else:
-            print('ip no valida')
+            print('ip no valida.')
     
     def executefree(self, string) -> None:
         for i in range(1, 11):
-            print(i)
-            print('intentando conectarse a:', string)
+            #print(i)
+            print(f"{i}: intentando conectarse a:", string)
 
 class PingProxy(Subject):
     def __init__(self, _real_ping: Ping) -> None:
         self._real_ping = _real_ping
     
     def execute(self, string) -> None:
+        print(f"intentando conectarse a'{string}':")
         if(string=='192.168.0.254'):
             self._real_ping.executefree('www.google.com')
         else:
