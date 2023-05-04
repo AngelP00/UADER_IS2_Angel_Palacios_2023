@@ -85,7 +85,6 @@ if __name__ == "__main__":
     decorator2 = ConcreteDecoratorMultiplicarPor2(decorator1)
     decorator3 = ConcreteDecoratorDividirPor3(decorator2)
 
-    print("Client: Now I've got a decorated component:")
     client_code(decorator3)
 
     print("\n")
